@@ -4,5 +4,6 @@
     <string name="firstPage">
         Немного расскажу про то что над нами.
     </string>
+    <string name="title_activity_grid_view_image_text">GridViewImageTextActi</string>
 
 </resources>
