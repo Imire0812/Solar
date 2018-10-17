@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnVpered = (Button) findViewById(R.id.btnVpered);
         btnVpered.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
-                Intent intent = new Intent(view.getContext(), CustomGridViewActivity.class);
+                Intent intent = new Intent(MainActivity.this, CustomGridViewActivity.class);
                 startActivity(intent);
             }
         });
