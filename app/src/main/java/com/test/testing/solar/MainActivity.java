@@ -1,13 +1,12 @@
 package com.test.testing.solar;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,17 +14,11 @@ public class MainActivity extends Activity implements OnClickListener {
         setContentView(R.layout.activity_main);
 
         Button btnVpered = (Button) findViewById(R.id.btnVpered);
-        btnVpered.setOnClickListener(this);
-
-    }
-
-    public void onClick(View v) {
-        Intent intent;
-        switch (v.getId()) {
-            case R.id.btnVpered:
-                intent = new Intent(MainActivity.this, GridViewImageTextActivity.class);
+        btnVpered.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+                Intent intent = new Intent(view.getContext(), CustomGridViewActivity.class);
                 startActivity(intent);
-                break;
-        }
+            }
+        });
     }
 }

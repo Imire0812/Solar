@@ -1,5 +1,6 @@
 package com.test.testing.solar;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
+@SuppressLint("Registered")
 public class GridViewImageTextActivity extends AppCompatActivity {
 
     GridView androidGridView;

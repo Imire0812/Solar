@@ -31,7 +31,7 @@ public class CustomGridViewActivity extends BaseAdapter {
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return i;
     }
 
     @Override
@@ -44,8 +44,8 @@ public class CustomGridViewActivity extends BaseAdapter {
 
             gridViewAndroid = new View(mContext);
             gridViewAndroid = inflater.inflate(R.layout.gridview_layout, null);
-            TextView textViewAndroid = gridViewAndroid.findViewById(R.id.android_gridview_text);
-            ImageView imageViewAndroid = gridViewAndroid.findViewById(R.id.android_gridview_image);
+            TextView textViewAndroid = (TextView) gridViewAndroid.findViewById(R.id.android_gridview_text);
+            ImageView imageViewAndroid = (ImageView) gridViewAndroid.findViewById(R.id.android_gridview_image);
             textViewAndroid.setText(gridViewString[i]);
             imageViewAndroid.setImageResource(gridViewImageId[i]);
         } else {
@@ -53,4 +53,5 @@ public class CustomGridViewActivity extends BaseAdapter {
         }
 
         return gridViewAndroid;
-    }}
+    }
+}
