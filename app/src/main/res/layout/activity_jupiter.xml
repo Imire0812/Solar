@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GridViewImageTextActivity">
+    android:background="@drawable/backgroundfon"
+    tools:context=".Jupiter">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -20,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_grid_view_image_text" />
+    <include layout="@layout/content_jupiter" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
